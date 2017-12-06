@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linh Phan | Welcome</title>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  </head>
+  <body>
+    
+    <!-- Start Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Web Huong Dan</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+
+    <div class="callout large primary">
+      <div class="row column text-center">
+        <h1>Title: Bla Bla</h1>
+      </div>
+    </div>
+    
+    <div class="row" id="content">
+      <div class="medium-8 columns">
+        <div class="blog-post">
+            <div id="content-test">
+    <h1>Help</h1>    
+       <h2>This is a test</h2>
+       <h3>Success</h3>
+       <pre>First page</pre>
+       <p><q>For example</q> </p>
+       <p>which works</p>
+       <p>pretty well</p>
+       <hr>
+        <ul>
+          <li><a href="http://facebook.com/linhphancntt">http://facebook.com/linhphancntt</a></li>
+        </ul>
+        <ul>
+          <li><a href="http://facebook.com/linhphancntt">http://facebook.com/linhphancntt</a></li>
+        </ul>
+        <ul>
+          <li><a href="http://facebook.com/linhphancntt">http://facebook.com/linhphancntt</a></li>
+        </ul>
+        <ul>
+          <li><a href="http://facebook.com/linhphancntt">http://facebook.com/linhphancntt</a></li>
+        </ul>
+        <hr>
+        <ul>
+          <li><a href="http://facebook.com/linhphancntt">http://facebook.com/linhphancntt</a></li>
+        </ul>
+        <pre><code><a href="http://facebook.com/linhphancntt">http://facebook.com/linhphancntt</a></li></code></pre>
+        <hr>
+  </div>
+        </div>
+      </div>
+      <div class="medium-3 columns" data-sticky-container>
+        <div class="sticky" data-sticky data-anchor="content">
+          <h4>Categories</h4>
+          <ul>
+            <% for i in 0..arr.length-1%>
+            <li><a href="#" onclick="loadDoc()"><%= arr[i] %></a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+      function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("content-test").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "<%=list_html[i]%>", true);
+      xhttp.send();
+}
+    </script>
+  </body>
+</html>
+
+
+
